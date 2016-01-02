@@ -2,15 +2,11 @@ package br.com.hightech;
 
 public interface PizzaBuilder {
 
-	PizzaCustomizadaBuilder chamada(String nome);
+	PizzaBuilder chamada(String nome);
 
-	PizzaCustomizadaBuilder comTipoDeMolho(TipoDeMolho tipoDeMolho);
+	PizzaBuilder comTipoDeMolho(TipoDeMolho tipoDeMolho);
 
-	PizzaCustomizadaBuilder recheadaCom(String recheio);
-
-	PizzaCustomizadaBuilder semBorda();
-
-	PizzaCustomizadaBuilder comBorda();
+	PizzaBuilder recheadaCom(String recheio);
 
 	Pizza criar();
 }
