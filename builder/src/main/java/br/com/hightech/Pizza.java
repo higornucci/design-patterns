@@ -1,6 +1,5 @@
 package br.com.hightech;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -11,14 +10,14 @@ public class Pizza {
 	private boolean bordaRecheada;
 	private List<Adicional> adicionais;
 
-	public Pizza(String nome, TipoDeMolho molho, String recheio, boolean bordaRecheada) {
+	public Pizza(String nome, TipoDeMolho molho, String recheio, boolean bordaRecheada, List<Adicional> adicionais) {
 		this.nome = nome;
 		this.molho = molho;
 		this.recheio = recheio;
 		this.bordaRecheada = bordaRecheada;
-		adicionais = new ArrayList<Adicional>();
+		this.adicionais = adicionais;
 	}
-
+	
 	public String getNome() {
 		return nome;
 	}
@@ -31,17 +30,16 @@ public class Pizza {
 		return recheio;
 	}
 
-	public void colocarAzeitonasPretas() {
-		Adicional adicionalDeAzeitonasPretas = new Adicional("Azeitonas Pretas");
-		adicionais.add(adicionalDeAzeitonasPretas);
-	}
-
 	public List<Adicional> getAdicionais() {
 		return Collections.unmodifiableList(adicionais);
 	}
 
 	public boolean isBordaRecheada() {
 		return bordaRecheada;
+	}
+	
+	public void adicionar(Adicional azeitonasPretas) {
+		this.adicionais.add(azeitonasPretas);
 	}
 
 	@Override
@@ -85,15 +83,5 @@ public class Pizza {
 		} else if (!recheio.equals(other.recheio))
 			return false;
 		return true;
-	}
-
-	public void colocarCebola() {
-		Adicional adicionalDeAzeitonasPretas = new Adicional("Cebola");
-		adicionais.add(adicionalDeAzeitonasPretas);
-	}
-
-	public void colocarRequeijao() {
-		Adicional adicionalDeAzeitonasPretas = new Adicional("Rqueijão");
-		adicionais.add(adicionalDeAzeitonasPretas);
 	}
 }
