@@ -2,3 +2,7 @@
 *.project
 builder/.settings/
 factory-method/.settings/
+/target/
+singleton/.settings/
+prototype/.settings/
+adapter/.settings/
