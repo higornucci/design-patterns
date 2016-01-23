@@ -9,3 +9,5 @@ adapter/.settings/
 bridge/.settings/
 composite/.settings/
 decorator/.settings/
+flyweight/.settings/
+proxy/.settings/
