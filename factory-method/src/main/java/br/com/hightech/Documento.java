@@ -5,15 +5,19 @@ import java.util.List;
 
 public abstract class Documento {
 	
-	private List<Pagina> paginas = new ArrayList<Pagina>();
+	private List<Topico> topicos = new ArrayList<Topico>();
 
 	public Documento() {
-		this.criarPaginas();
+		this.criarTopicos();
 	}
 
-	protected List<Pagina> getPaginas() {
-		return paginas;
+	protected List<Topico> getTopicos() {
+		return topicos;
+	}
+	
+	protected void adicionar(Topico topico) {
+		topicos.add(topico);
 	}
 
-	public abstract void criarPaginas();
+	public abstract void criarTopicos();
 }

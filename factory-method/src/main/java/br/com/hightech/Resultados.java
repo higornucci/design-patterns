@@ -1,5 +1,5 @@
 package br.com.hightech;
 
-public class Resultados implements Pagina {
+public class Resultados implements Topico {
 
 }

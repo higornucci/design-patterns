@@ -1,5 +1,5 @@
 package br.com.hightech;
 
-public interface Pagina {
+public interface Topico {
 
 }
