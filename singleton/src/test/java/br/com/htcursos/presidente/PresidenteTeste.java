@@ -16,4 +16,12 @@ public class PresidenteTeste {
 		Presidente presidenteSingleton = Presidente.getInstance();
 		assertEquals(presidenteEsperado.getNome(), presidenteSingleton.getNome());
 	}
+	
+	@Test
+	public void deve_haver_um_presidente_singleton() throws Exception {
+		String dilmaRousseff = "Dilma Rousseff";
+
+		Presidente presidenteSingleton = Presidente.getInstance();
+		assertEquals(dilmaRousseff, presidenteSingleton.getNome());
+	}
 }

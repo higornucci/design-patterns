@@ -2,18 +2,16 @@ package br.com.htcursos.presidente;
 
 public final class Presidente {
 
-	private static final Presidente PRESIDENTE = new Presidente();
+	private static Presidente PRESIDENTE;
 	private String nome;
 	
 	private Presidente() {
 	}
 
 	public static Presidente getInstance() {
-		if(PRESIDENTE == null) {
-			return new Presidente();
-		} else {
-			return PRESIDENTE;
-		}
+		if(PRESIDENTE == null) 
+			PRESIDENTE = new Presidente();
+		return PRESIDENTE;
 	}
 
 	public void definir(String presidente) {
