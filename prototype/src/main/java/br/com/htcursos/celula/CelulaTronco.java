@@ -7,7 +7,7 @@ public class CelulaTronco implements Celula {
 	}
 
 	public String funcao() {
-		return "Minha função é criar novas celulas.";
+		return "Minha funÃ§Ã£o Ã© criar novas celulas.";
 	}
 	
 }

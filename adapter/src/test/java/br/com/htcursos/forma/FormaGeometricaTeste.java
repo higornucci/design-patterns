@@ -1,5 +1,6 @@
 package br.com.htcursos.forma;
 
+import br.com.htcursos.retangulo.RetanguloLegado;
 import org.junit.Test;
 
 import br.com.htcursos.linha.Linha;
@@ -13,7 +14,7 @@ public class FormaGeometricaTeste {
 
 		int x1 = 10, y1 = 20;
 		int x2 = 30, y2 = 60;
-		for (int i = 0; i < formasGeometricas.length; ++i)
-			formasGeometricas[i].desenhar(x1, y1, x2, y2);
+		for (FormaGeometrica formasGeometrica : formasGeometricas)
+			formasGeometrica.desenhar(x1, y1, x2, y2);
 	}
 }
