@@ -17,3 +17,5 @@ observer/.settings/
 state/.settings/
 strategy/.settings/
 template-method/.settings/
+.idea/
+*.iml
