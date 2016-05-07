@@ -1,18 +1,18 @@
 package br.com.htcursos;
 
-public class NotificadorViaEmailAssincrono implements Notificacao {
+public class NotificadorAssincrono implements Notificacao {
 	
 	private final Notificacao notificador;
 
-	public NotificadorViaEmailAssincrono(Notificacao notificacao) {
+	public NotificadorAssincrono(Notificacao notificacao) {
 		notificador = notificacao;
 	}
 
-	public void notificar(final String email) {
+	public void notificar() {
 		Runnable enviadorRunnable = new Runnable() {
 			public void run() {
 				try {
-					notificador.notificar(email);
+					notificador.notificar();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

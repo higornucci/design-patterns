@@ -1,7 +1,7 @@
 package br.com.htcursos;
 
-public class GerenciadorDeCompras {
-	public void verificar(Compra compra) {
+public class AprovadorDeCompras {
+	public void aprovar(Compra compra) {
 		Aprovador supervisor = new Supervisor();
 		Aprovador gerente = new Gerente();
 		Aprovador presidente = new Presidente();
@@ -9,6 +9,6 @@ public class GerenciadorDeCompras {
 		supervisor.adicionarSucessor(gerente);
 		gerente.adicionarSucessor(presidente);
 
-		supervisor.verificar(compra);
+		supervisor.aprovar(compra);
 	}
 }
