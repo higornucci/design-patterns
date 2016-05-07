@@ -10,7 +10,7 @@ public class Compartilhavel extends Decorator {
 		super(itemDaBiblioteca);
 	}
 
-	public void compartilhar(String nome) {
+	public void compartilharCom(String nome) {
 		pessoasComQuemCompartilhei.add(nome);
 		itemDaBiblioteca.numeroDeCopias--;
 	}
@@ -18,6 +18,11 @@ public class Compartilhavel extends Decorator {
 	public void devolver(String nome) {
 		pessoasComQuemCompartilhei.remove(nome);
 		itemDaBiblioteca.numeroDeCopias++;
+	}
+
+	@Override
+	public int getNumeroDeCopias() {
+		return itemDaBiblioteca.numeroDeCopias;
 	}
 
 	@Override

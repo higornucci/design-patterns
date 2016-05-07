@@ -3,7 +3,7 @@ package br.com.htcursos;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FabricaDeLetras {
+public class LetrasFlyweight {
 	private Map<Character, Letra> letras = new HashMap<Character, Letra>();
 
 	public Letra getLetra(Character chave) {

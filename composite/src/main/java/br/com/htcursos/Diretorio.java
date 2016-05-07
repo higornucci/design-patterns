@@ -16,12 +16,12 @@ public class Diretorio implements Arquivo {
 		arquivos.add(arquivo);
 	}
 
-	public void exibirDiretorio() {
+	public void exibir() {
 		System.out.println(CompositeDemo.identacao + nome);
 		CompositeDemo.identacao.append("   ");
 		for (int i = 0; i < arquivos.size(); ++i) {
-			Arquivo arquivo = (Arquivo) arquivos.get(i);
-			arquivo.exibirDiretorio();
+			Arquivo arquivo = arquivos.get(i);
+			arquivo.exibir();
 		}
 		CompositeDemo.identacao.setLength(CompositeDemo.identacao.length() - 3);
 	}

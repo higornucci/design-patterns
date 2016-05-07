@@ -7,7 +7,7 @@ public class Doc implements Arquivo {
 		this.nome = nome;
 	}
 
-	public void exibirDiretorio() {
+	public void exibir() {
 		System.out.println(CompositeDemo.identacao + nome);
 	}
 }
