@@ -8,5 +8,5 @@ public abstract class Aprovador {
 		this.sucessor = sucessor;
 	}
 	
-	public abstract void verificar(Compra compra);
+	public abstract void aprovar(Compra compra);
 }

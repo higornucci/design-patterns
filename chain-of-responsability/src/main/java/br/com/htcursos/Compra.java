@@ -4,7 +4,8 @@ public class Compra {
 	private int codigo;
 	private double valor;
 	private String descricao;
-	
+	private Aprovador aprovador;
+
 	public Compra(int codigo, double valor, String descricao) {
 		this.codigo = codigo;
 		this.valor = valor;
@@ -17,6 +18,14 @@ public class Compra {
 
 	public double getValor() {
 		return valor;
+	}
+
+	public Aprovador getAprovador() {
+		return aprovador;
+	}
+
+	public void aprovadaPor(Aprovador aprovador) {
+		this.aprovador = aprovador;
 	}
 
 	public String getDescricao() {
