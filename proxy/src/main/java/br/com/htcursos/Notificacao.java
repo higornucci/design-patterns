@@ -2,6 +2,6 @@ package br.com.htcursos;
 
 public interface Notificacao {
 
-	void notificar();
+	void notificar(String email);
 
 }
