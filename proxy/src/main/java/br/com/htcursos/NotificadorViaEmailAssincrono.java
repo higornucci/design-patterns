@@ -8,11 +8,11 @@ public class NotificadorViaEmailAssincrono implements Notificacao {
 		notificador = notificacao;
 	}
 
-	public void notificar() {
+	public void notificar(final String email) {
 		Runnable enviadorRunnable = new Runnable() {
 			public void run() {
 				try {
-					notificador.notificar();
+					notificador.notificar(email);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
