@@ -1,20 +1,25 @@
 package br.com.htcursos;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ListaDeComandos {
-	public static List<Comando> criar() {
-		List<Comando> fila = new ArrayList<Comando>();
-		fila.add(new Encanador());
-		fila.add(new Politico());
-		fila.add(new Designer());
-		return fila;
+
+	private List<Comando> fila = new ArrayList<Comando>();
+
+	public void adicionar(Comando comando) {
+		fila.add(comando);
 	}
 
-	public static void trabalhar(List<Comando> fila) {
+	public void remover(Comando comando) {
+		fila.remove(comando);
+	}
+
+	public void trabalhar() {
 		for (Comando comando : fila) {
 			comando.executar();
 		}
+		fila.clear();
 	}
 }
