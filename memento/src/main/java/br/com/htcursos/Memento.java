@@ -1,13 +1,14 @@
 package br.com.htcursos;
 
 public class Memento {
-	private String estado;
+	private final Solicitacao solicitacao;
 
-	public Memento(String estadoASerSalvo) {
-		estado = estadoASerSalvo;
+	public Memento(Solicitacao solicitacao) {
+		Solicitacao solicitacaoASerSalva = new Solicitacao(solicitacao.getEstado());
+		this.solicitacao = solicitacaoASerSalva;
 	}
 
-	public String getEstadoSalvo() {
-		return estado;
+	public Solicitacao getSolicitacaoSalva() {
+		return solicitacao;
 	}
 }

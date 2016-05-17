@@ -10,6 +10,6 @@ public class Caretaker {
 	}
 
 	public Memento getMemento(int indice) {
-		return estadosSalvos.get(indice);
+		return estadosSalvos.get(indice-1);
 	}
 }
